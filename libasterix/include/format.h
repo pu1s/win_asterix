@@ -27,14 +27,16 @@ SOFTWARE.
 #include "global.h"
 #include <cassert>
 
-#ifndef UCHAR 
-#define UCHAR unsigned char
-#endif
+
+#define ASX_UCHAR unsigned char
+#define ASX_UINT unsigned int
+#define ASX_UCHAR_PTR ASX_UCHAR*
+#define ASX_UINT_PTR ASX_UINT*
 
 namespace asx
 {
 	typedef
-		enum  class  ASX_API asx_formatter_param_tag : UCHAR
+		enum  class  ASX_API asx_formatter_param_tag : ASX_UCHAR
 	{
 		FRMT_PARAM_DEFAULT = 0x0000, // ќставл€ет параметры стандартного ввода вывода независимо от того объ€влены ли другие параметры
 		FRMT_PARAM_SHOWPOS = 0x0001, // ¬ключает возможность показывать знак плюс при положительном значении 
@@ -45,8 +47,8 @@ namespace asx
 	typedef
 		struct ASX_API asx_formatter_tag
 	{
-		typedef UCHAR* FRMT_PARAMS;
-		typedef unsigned int* FRMT_PRECISION;
+		typedef ASX_UCHAR_PTR FRMT_PARAMS;
+		typedef ASX_UINT_PTR FRMT_PRECISION;
 	
 	protected:
 		FRMT_PARAMS			p_format_parameters;
@@ -54,10 +56,10 @@ namespace asx
 	
 	public:
 		asx_formatter_tag() noexcept;
-		explicit asx_formatter_tag(const UCHAR&& params) noexcept;
-		explicit asx_formatter_tag(const UCHAR&& params, const unsigned int& precision) noexcept;
-		void CDECL set_format_parameters(const UCHAR&&) noexcept;
-		void CDECL set_format_precision(const unsigned int&&) noexcept;
+		explicit asx_formatter_tag(const ASX_UCHAR&& params) noexcept;
+		explicit asx_formatter_tag(const ASX_UCHAR&& params, const ASX_UINT& precision) noexcept;
+		void CDECL set_format_parameters(const ASX_UCHAR&&) noexcept;
+		void CDECL set_format_precision(const ASX_UINT&&) noexcept;
 		virtual  ~asx_formatter_tag();
 
 		
