@@ -48,7 +48,7 @@ namespace asx
 		typedef UCHAR* FRMT_PARAMS;
 		typedef unsigned int* FRMT_PRECISION;
 	
-	private:
+	protected:
 		FRMT_PARAMS			p_format_parameters;
 		FRMT_PRECISION		p_format_precision;
 	
@@ -58,7 +58,7 @@ namespace asx
 		explicit asx_formatter_tag(const UCHAR&& params, const unsigned int& precision) noexcept;
 		void CDECL set_format_parameters(const UCHAR&&) noexcept;
 		void CDECL set_format_precision(const unsigned int&&) noexcept;
-		~asx_formatter_tag();
+		virtual  ~asx_formatter_tag();
 
 		
 	}FORMATTER, *_formatter_;
