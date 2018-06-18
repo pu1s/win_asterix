@@ -6,9 +6,9 @@ using namespace std;
 
 int main()
 {
+	asterix_footer();
 #ifdef _WIN32
 	system("pause");
 #endif
-	cout << "Hello Asterix!!!" << endl;
 	return 0;
 }

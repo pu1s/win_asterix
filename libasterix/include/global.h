@@ -1,3 +1,4 @@
+
 /*
 MIT License
 
@@ -27,3 +28,39 @@ SOFTWARE.
 #ifdef _WIN32
 
 #endif
+
+#include <iostream>
+
+using namespace std;
+//
+// Define Import & Export functions macro
+//
+#ifndef ASTERIX_EXPORT
+#define ASTERIX_EXPORT
+#endif // !ASTERIX_EXPORT
+
+#ifdef ASTERIX_EXPORT
+#ifdef __cplusplus
+#define ASX_API __declspec(dllexport)
+#else
+#define ASX_API extern "C"
+#endif
+#else
+#define ASX_API __declspec(dllimport)
+#endif // ASTERIX_EXPORT
+
+#ifdef _WIN32
+#define CDECL __cdecl
+#endif
+
+/*
+Basic Hello Function
+*/
+void ASX_API CDECL asterix_footer() noexcept
+{
+	cout << "**************************************************************" << endl;
+	cout << "*               Hello Asterix Library!!!                     *" << endl;
+	cout << "**************************************************************" << endl;
+}
+
+

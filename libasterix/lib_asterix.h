@@ -25,3 +25,4 @@ SOFTWARE.
 #pragma once
 
 #include "include\format.h"
+#include "include\global.h"
