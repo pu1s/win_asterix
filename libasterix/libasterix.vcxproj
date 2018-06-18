@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\asxlib.h" />
     <ClInclude Include="include\format.h" />
     <ClInclude Include="include\global.h" />
     <ClInclude Include="lib_asterix.h" />

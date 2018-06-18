@@ -25,8 +25,43 @@ SOFTWARE.
 #pragma once
 
 #include "global.h"
+#include <cassert>
 
+#ifndef UCHAR 
+#define UCHAR unsigned char
+#else
+#undef UCHAR
+#define UCHAR unsigned char
+#endif
 namespace asx
 {
+	typedef
+		enum class ASX_API asx_formatter_param_tag : UCHAR
+	{
+		FRMT_PARAM_DEFAULT = 0x0000, // Оставляет параметры стандартного ввода вывода независимо от того объявлены ли другие параметры
+		FRMT_PARAM_SHOWPOS = 0x0001, // Включает возможность показывать знак плюс при положительном значении 
+		FRMT_PARAM_FILLNUL = 0x0002, // Показывает нули слева от разделителя целой и дробной части
+		FRMT_PARAM_SHOWEXP = 0x0004, // Представляет число в экспоненциальной форме
+	}FRMT_PARAM;
 
+	typedef
+		struct ASX_API asx_formatter_tag
+	{
+		typedef UCHAR* FRMT_PARAMS;
+		typedef unsigned int* FRMT_PRECISION;
+	
+	private:
+		FRMT_PARAMS			p_format_parameters;
+		FRMT_PRECISION		p_format_precision;
+	
+	public:
+		asx_formatter_tag() noexcept;
+		explicit asx_formatter_tag(const UCHAR&& params) noexcept;
+		explicit asx_formatter_tag(const UCHAR&& params, const unsigned int& precision) noexcept;
+		void CDECL set_format_parameters(const UCHAR&&) noexcept;
+		void CDECL set_format_precision(const unsigned int&&) noexcept;
+		~asx_formatter_tag();
+
+		
+	}FORMATTER, *_formatter_;
 }

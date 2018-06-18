@@ -23,6 +23,17 @@ SOFTWARE.
 */
 
 #pragma once
+#include "global.h"
 
-#include "include\asxlib.h"
-#include "include\format.h"
+#include <iostream>
+
+using namespace std;
+/*
+Basic Hello Function
+*/
+void ASX_API CDECL asterix_footer() noexcept
+{
+	cout << "**************************************************************" << endl;
+	cout << "*               Hello Asterix Library!!!                     *" << endl;
+	cout << "**************************************************************" << endl;
+}

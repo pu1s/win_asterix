@@ -29,9 +29,7 @@ SOFTWARE.
 
 #endif
 
-#include <iostream>
 
-using namespace std;
 //
 // Define Import & Export functions macro
 //
@@ -53,14 +51,6 @@ using namespace std;
 #define CDECL __cdecl
 #endif
 
-/*
-Basic Hello Function
-*/
-void ASX_API CDECL asterix_footer() noexcept
-{
-	cout << "**************************************************************" << endl;
-	cout << "*               Hello Asterix Library!!!                     *" << endl;
-	cout << "**************************************************************" << endl;
-}
+
 
 
