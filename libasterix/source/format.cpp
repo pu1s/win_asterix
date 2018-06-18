@@ -35,3 +35,5 @@ asx::asx_formatter_tag::~asx_formatter_tag()
 	delete p_format_parameters;
 	delete p_format_precision;
 }
+
+#undef UCHAR

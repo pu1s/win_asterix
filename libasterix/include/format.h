@@ -29,14 +29,12 @@ SOFTWARE.
 
 #ifndef UCHAR 
 #define UCHAR unsigned char
-#else
-#undef UCHAR
-#define UCHAR unsigned char
 #endif
+
 namespace asx
 {
 	typedef
-		enum class ASX_API asx_formatter_param_tag : UCHAR
+		enum  class  ASX_API asx_formatter_param_tag : UCHAR
 	{
 		FRMT_PARAM_DEFAULT = 0x0000, // ќставл€ет параметры стандартного ввода вывода независимо от того объ€влены ли другие параметры
 		FRMT_PARAM_SHOWPOS = 0x0001, // ¬ключает возможность показывать знак плюс при положительном значении 
