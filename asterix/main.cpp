@@ -19,8 +19,8 @@ void NewFunction()
 {
 	asx::_formatter f((unsigned char)asx::_frmt_param::FRMT_PARAM_DEFAULT | (unsigned char)asx::_frmt_param::FRMT_PARAM_SHOWPOS, 5);
 	
-	/*asx::types::basic_point::formatter fyyy((unsigned char)asx::_frmt_param::FRMT_PARAM_SHOWPOS);
+	asx::types::basic_point::formatter fyyy((unsigned char)asx::_frmt_param::FRMT_PARAM_SHOWPOS);
 	asx::types::basic_point aut;
-	aut.format.set_format_parameters((unsigned char)asx::_frmt_param::FRMT_PARAM_SHOWPOS);
-	cout << aut.to_string() << endl;*/
+	
+	cout << aut.to_string() << endl;
 }
