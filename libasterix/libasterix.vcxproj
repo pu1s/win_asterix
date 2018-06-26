@@ -153,6 +153,7 @@
     <ClInclude Include="include\asxlib.h" />
     <ClInclude Include="include\format.h" />
     <ClInclude Include="include\global.h" />
+    <ClInclude Include="include\point.h" />
     <ClInclude Include="lib_asterix.h" />
   </ItemGroup>
   <ItemGroup>
